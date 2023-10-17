@@ -1,0 +1,83 @@
+/* Base */
+
+.slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.slider__slides {
+  max-height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider__slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slider__slide {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+/* Navigation */
+.slider__nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.slider__nav>button {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  pointer-events: initial;
+}
+
+.slider__nav>button:disabled {
+  background-color: #ccc;
+}
+
+.slider__nav>button:not(:disabled):hover {
+  background: gray;
+  cursor: pointer;
+}
+
+/* Modifiers */
+.slider--fullscreen {
+  height: 100vh;
+}
+
+.slider--fullscreen .slider__slides {
+  max-height: 100vh;
+  gap: 0;
+}
+
+.slider--fullscreen .slider__slide {
+  height: 100vh;
+}
+
+.slider--fullscreen .slider__slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

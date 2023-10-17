@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Snap</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="slider slider--fullscreen">
+    <nav class="slider__nav">
+      <button title="Go to the previous slide" data-prev>
+        &larr;
+      </button>
+      <button title="Go to the next slide" data-next>
+        &rarr;
+      </button>
+    </nav>
+
+    <div class="slider__slides" data-slider>
+      <div class="slider__slide">
+        <h1>Slide 1</h1>
+      </div>
+
+      <div class="slider__slide">
+        <h1>Slide 2</h1>
+      </div>
+
+      <div class="slider__slide">
+        <h1>Slide 3</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+
+</html>
