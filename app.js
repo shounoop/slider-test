@@ -66,12 +66,10 @@ const main = () => {
 			const x = e.pageX - slider.offsetLeft;
 			const walk = x - startX;
 
-			if (walk < -100 && index < slides.length - 1) {
+			if (walk < 0 && index < slides.length - 1) {
 				slide('next');
-			} else if (walk > 100 && index > 0) {
+			} else if (walk > 0 && index > 0) {
 				slide('prev');
-			} else {
-				slide();
 			}
 		});
 
